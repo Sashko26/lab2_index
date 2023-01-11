@@ -6,16 +6,21 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Searchengine</title>
+    <link rel="stylesheet" type="text/css" href="index.css" media=”screen” />
 </head>
 <body>
-        <form action="/handle_data" method="post">
-            <div>
-              <input type="text" title="Search">
+    <center>
+        <form action="{{ url_for('handle_data') }}" method="post">
+            <div class="bar" style="margin:0 auto; width:575px; border-radius:30px; border:1px solid #dcdcdc;">
+              <input class="searchbar" type="text" title="Search" name="projectFilepath"
+                     style="height:45px; border:none; width:500px; font-size:16px; outline: none;">
             </div>
-            <div>
-                <input type="submit">
-                <a style="text-decoration: none; color: #707070;" href="/my-link/">Search</a>
+            <div class="buttons" style="margin-top:30px;">
+                <input style="width: 150px; background-color: #f5f5f5; border:none; color:#707070; font-size:15px;
+                  padding: 10px 20px; margin:5px; border-radius:4px; outline:none;"
+                  class="button" type="submit">
             </div>
         </form>
+    </center>
 </body>
 </html>
